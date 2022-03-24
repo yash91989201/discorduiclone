@@ -39,7 +39,7 @@ const NavItem = styled(Button)(({ theme }) => ({
   borderRadius: "4px",
   justifyContent: "flex-start",
   letterSpacing: "1.0125px",
-  fontWeight: "200",
+  fontWeight: "300",
   textTransform: "none",
   color: theme.palette.bgCol.black1,
   ":hover": {
