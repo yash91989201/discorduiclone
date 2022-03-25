@@ -17,6 +17,10 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+// import images
+import CenterBgLanding from "../../assets/images/center_bg_landing_header.svg";
+import LeftBgLanding from "../../assets/images/left_bg_landing_header.svg";
+import RightBgLanding from "../../assets/images/right_bg_landing_header.svg";
 
 const Item = styled(Button)(({ theme }) => ({
   margin: "0 8px",
@@ -320,7 +324,7 @@ const HeroSection = () => {
             position: "absolute",
             bottom: "0",
           }}
-          src="./assets/center_bg_landing_header.svg"
+          src={CenterBgLanding}
           alt=""
         />
         <img
@@ -330,7 +334,7 @@ const HeroSection = () => {
             left: matchesLg ? "30%" : "0",
             width: "min(600px,85vw)",
           }}
-          src="./assets/left_bg_landing_header.svg"
+          src={LeftBgLanding}
           alt=""
         />
         <img
@@ -341,7 +345,7 @@ const HeroSection = () => {
             width: "675px",
             display: matchesLg ? "none" : "",
           }}
-          src="./assets/right_bg_landing_header.svg"
+          src={RightBgLanding}
           alt=""
         />
       </div>

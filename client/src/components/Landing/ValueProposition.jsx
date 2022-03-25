@@ -5,24 +5,30 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
+// importing icons
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+// importing images
+import HangingOutLanding from "../../assets/images/hanging_out_easy_landing.svg";
+import InviteOnlyLanding from "../../assets/images/invite_only_landing.svg";
+import FandomLanding from "../../assets/images/fandom_landing.svg";
+import JustChillingLanding from "../../assets/images/just_chilling_landing.svg";
+import TinyStars from "../../assets/images/tiny_stars_landing.svg";
 
 const valueProposition = [
   {
     header: "Create an invite-only place where you belong",
     text: " ...where you can belong to a school club a gaming group or a worldwide art community. Where just you and a handful can spend time together. A place that makes it easy to talk very day and hand our more often",
-    imageLink: "./assets/images/hanging_out_easy_landing.svg",
+    imageLink: HangingOutLanding,
   },
   {
     header: "Where hanging out is easy",
     text: "Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.",
-    imageLink: "./assets/images/invite_only_landing.svg",
+    imageLink: InviteOnlyLanding,
   },
   {
     header: " From few to a fandom",
     text: "Get any community running with moderation tools and custom member access. Give members special powers, set up private channels, and more.",
-    imageLink: "./assets/images/fandom_landing.svg",
+    imageLink: FandomLanding,
   },
 ];
 
@@ -32,7 +38,7 @@ const ValueProposition = () => {
   return (
     <>
       {valueProposition.map((propItem, index) => (
-        <Fade bottom>
+        <Fade key={index} bottom>
           <Box
             sx={{
               padding: "clamp(12px,5vw,32px)",
@@ -132,7 +138,7 @@ const ValueProposition = () => {
           </Box>
           {/* icon */}
           <img
-            src="./assets/images/just_chilling_landing.svg"
+            src={JustChillingLanding}
             alt="invite_only_landing"
             style={{ width: "min(90%,77vw)" }}
           />
@@ -140,7 +146,7 @@ const ValueProposition = () => {
             sx={{
               position: "relative",
               width: "100%",
-              backgroundImage: "url('./assets/images/tiny_stars_landing.svg')",
+              backgroundImage: `url(${TinyStars})`,
               backgroundPosition: "center",
               backgroundFit: "contain",
               backgroundSize: matchesLg ? "75%" : "50%",

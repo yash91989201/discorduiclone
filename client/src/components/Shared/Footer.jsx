@@ -15,11 +15,14 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { ReactComponent as DiscordMiniLogo } from "../../assets/icons/discord_mini_logo.svg";
+// import images
+import AmericanFlag from "../../assets/images/america_flag.png";
 
 const Item = styled(Typography)(({ theme }) => ({
   backgroundColor: "transparent",
   padding: theme.spacing(1),
   boxShadow: "none",
+  fontSize: "clamp(12px,4vw,16px)",
   color: theme.palette.textCol.white1,
   cursor: "pointer",
   ":hover": {
@@ -30,7 +33,7 @@ const Item = styled(Typography)(({ theme }) => ({
 const Footer = () => {
   const theme = useTheme();
   const matchesMd = useMediaQuery(theme.breakpoints.down("md"));
-
+  const matchesXs = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <Box
       component="footer"
@@ -67,7 +70,7 @@ const Footer = () => {
             >
               <img
                 style={{ width: "32px", marginRight: "16px" }}
-                src="./assets/images/america_flag.png"
+                src={AmericanFlag}
                 alt="america flag"
               />
               <span style={{ color: "#fff" }}>English,USA</span>
@@ -79,7 +82,7 @@ const Footer = () => {
               paddingY: "16px",
               display: "inline-flex",
               justifyContent: "space-between",
-              width: "50%",
+              width: matchesMd ? "75%" : "50%",
               color: "bgCol.white1",
             }}
           >
@@ -89,21 +92,21 @@ const Footer = () => {
             <YouTubeIcon />
           </Box>
         </Box>
-        <Grid container spacing={6} sx={{ paddingY: "24px" }}>
-          <Grid item lg={3} md={3} sm={6} xs={12}>
+        <Grid container spacing={matchesXs ? 1 : 6} sx={{ paddingY: "24px" }}>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
             <Item sx={{ color: "textCol.purple1" }}>Product</Item>
             <Item>Download</Item>
             <Item>Nitro</Item>
             <Item>Status</Item>
           </Grid>
-          <Grid item lg={3} md={3} sm={6} xs={12}>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
             <Item sx={{ color: "textCol.purple1" }}>Company</Item>
             <Item>About</Item>
             <Item>Jobs</Item>
             <Item>Branding</Item>
             <Item>Newsroom</Item>
           </Grid>
-          <Grid item lg={3} md={3} sm={6} xs={12}>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
             <Item sx={{ color: "textCol.purple1" }}>Resources</Item>
             <Item>College</Item>
             <Item>Support</Item>
@@ -113,7 +116,7 @@ const Footer = () => {
             <Item>Devlopers</Item>
             <Item>Streamkit</Item>
           </Grid>
-          <Grid item lg={3} md={3} sm={6} xs={12}>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
             <Item sx={{ color: "textCol.purple1" }}>Policies</Item>
             <Item>Terms</Item>
             <Item>Privacy</Item>
@@ -133,14 +136,16 @@ const Footer = () => {
           }}
         />
         <Box display="flex" justifyContent="space-between">
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div
+            style={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}
+          >
             <DiscordMiniLogo
               style={{ width: "40px", paddingX: "16px", color: "white" }}
             />
             <Typography
               variant="h5"
               fontWeight="bold"
-              paddingX="clamp(8px,3vw,16px)"
+              paddingX="clamp(12px,2.5vw,16px)"
               sx={{ color: "textCol.white1" }}
             >
               Discord
