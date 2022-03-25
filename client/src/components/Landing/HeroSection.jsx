@@ -109,6 +109,7 @@ const HeroSection = () => {
           <Button
             variant="contained"
             size="medium"
+            href="/login"
             sx={{
               padding: "6px min(4vw,24px)",
               borderRadius: "24px",
