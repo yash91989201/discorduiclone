@@ -192,7 +192,7 @@ const Register = () => {
             variant="contained"
             textTransform="none"
             sx={{
-              marginY: "32px",
+              marginY: "16px",
               padding: "14px",
               width: "100%",
               backgroundColor: "bgCol.purple2",
@@ -204,7 +204,7 @@ const Register = () => {
           <Typography
             variant="h6"
             color="textCol.blue1"
-            sx={{ cursor: "pointer" }}
+            sx={{ paddingY: "12px", cursor: "pointer" }}
           >
             <Link to="/login">Already have an account ?</Link>
           </Typography>

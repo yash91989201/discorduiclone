@@ -67,7 +67,7 @@ const Login = () => {
       <Box
         sx={{
           zIndex: "9",
-          width: matchesMd ? "100%" : "min(640px,60vw)",
+          width: matchesMd ? "100%" : "min(800px,65vw)",
           backgroundColor: "bgCol.grey2",
           display: "flex",
           flexFlow: "row nowrap",
@@ -75,18 +75,32 @@ const Login = () => {
           borderRadius: matchesMd ? "0px" : "6px",
         }}
       >
-        <Box style={{ flex: 1 }}>
-          <Typography
-            variant={matchesSm ? "h5" : "h4"}
-            padding="16px"
-            color="textCol.grey1"
+        <Box
+          style={{
+            flex: 1,
+            display: "flex",
+            flexFlow: "column nowrap",
+            justifyContent: "center",
+          }}
+        >
+          <Container
+            sx={{
+              marginY: "16px",
+            }}
+            maxWidth="sm"
           >
-            Welcome Back!
-          </Typography>
-          <Typography variant="body2" paddingX="16px" color="textCol.grey1">
-            We are so glad to see you again.
-          </Typography>
-          <Container maxWidth>
+            <Typography
+              variant={matchesSm ? "h5" : "h4"}
+              paddingBottom="16px"
+              color="textCol.grey1"
+            >
+              Welcome Back!
+            </Typography>
+            <Typography variant="body2" color="textCol.grey1">
+              We are so glad to see you again.
+            </Typography>
+          </Container>
+          <Container maxWidth="sm">
             <FormLabel
               htmlFor="email"
               sx={{
@@ -146,13 +160,12 @@ const Login = () => {
                 variant="filled"
                 type="email"
                 name="email"
-                sx={{}}
               />
             </FormLabel>
             <Typography
               variant="h6"
               color="textCol.blue1"
-              sx={{ cursor: "pointer" }}
+              sx={{ cursor: "pointer", paddingY: "16px" }}
             >
               Forgot your password?
             </Typography>
@@ -160,7 +173,7 @@ const Login = () => {
               variant="contained"
               textTransform="none"
               sx={{
-                marginY: "32px",
+                marginY: "8px",
                 padding: "14px",
                 width: "100%",
                 backgroundColor: "bgCol.purple2",
@@ -172,9 +185,9 @@ const Login = () => {
             <Typography
               variant="h6"
               color="textCol.grey2"
-              sx={{ cursor: "pointer" }}
+              sx={{ paddingY: "12px", cursor: "pointer" }}
             >
-              Need an account?{" "}
+              Need an account?
               <span style={{ color: "#00b0f4" }}>
                 <Link to="/register">Register</Link>
               </span>
@@ -183,15 +196,24 @@ const Login = () => {
         </Box>
         <Box
           sx={{
-            width: "40%",
+            width: "45%",
             display: matchesMd ? "none" : "flex",
             flexFlow: "column",
-            justifyContent: "space-evenly",
+            justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <img style={{ width: "75%" }} src={QrCodeImg} alt="qr code img" />
-          <Box sx={{ textAlign: "center" }}>
+          <img
+            style={{
+              padding: "10px",
+              width: "min(400px,50%)",
+              borderRadius: "6px",
+              backgroundColor: "#fff",
+            }}
+            src={QrCodeImg}
+            alt="qr code img"
+          />
+          <Box sx={{ marginY: "16px", width: "90%", textAlign: "center" }}>
             <Typography variant="h6" color="textCol.grey1" paddingY="16px">
               Log in with QR Code
             </Typography>
