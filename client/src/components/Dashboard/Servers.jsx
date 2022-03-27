@@ -24,6 +24,7 @@ const Servers = () => {
     >
       {/* discord logo */}
       <Button
+        href="/dashboard/friends"
         sx={{
           marginBottom: "12px",
           padding: "18px",
@@ -36,6 +37,7 @@ const Servers = () => {
         />
       </Button>
       <Button
+        href="/dashboard/newLineServer"
         sx={{
           width: "95%",
           borderRadius: "",

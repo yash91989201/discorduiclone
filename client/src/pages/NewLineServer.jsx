@@ -4,6 +4,8 @@ import Stack from "@mui/material/Stack";
 
 import Servers from "../components/Dashboard/Servers";
 import Channels from "../components/NewLineServer/Channels";
+import JavaScriptChannel from "../components/NewLineServer/JavaScriptChannel";
+import Online from "../components/NewLineServer/Online";
 
 const Dashboard = () => {
   return (
@@ -17,6 +19,9 @@ const Dashboard = () => {
       }}
     >
       <Servers />
+      <Channels />
+      <JavaScriptChannel />
+      <Online />
     </Stack>
   );
 };
