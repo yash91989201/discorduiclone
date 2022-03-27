@@ -129,7 +129,6 @@ const Login = () => {
                 variant="filled"
                 type="email"
                 name="email"
-                sx={{}}
               />
             </FormLabel>
             <FormLabel

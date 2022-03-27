@@ -5,7 +5,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Landing from "./pages/Landing";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import NewLineServer from "./pages/NewLineServer";
+import Friends from "./components/Dashboard/Friends";
 import "./App.css";
+import AddFriend from "./components/Dashboard/AddFriend";
+import Online from "./components/Dashboard/Online";
 
 const theme = createTheme({
   palette: {
@@ -54,6 +59,26 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/dashboard/" element={<Dashboard />}>
+              <Route path="/dashboard/" element={<Friends />} />
+              <Route path="/dashboard/friends/" element={<Friends />}>
+                <Route path="/dashboard/friends/" element={<Online />} />
+                <Route path="/dashboard/friends/online" element={<Online />} />
+                <Route
+                  path="/dashboard/friends/addFriend"
+                  element={<AddFriend />}
+                />
+              </Route>
+              {/* <Route
+                path="/dashboard/stageDiscovery"
+                element={<StageDiscovery />}
+              />
+              <Route path="/dashboard/nitro" element={<Nitro />} /> */}
+            </Route>
+            <Route
+              path="/dashboard/newLineServer"
+              element={<NewLineServer />}
+            />
           </Routes>
         </BrowserRouter>
       </div>
