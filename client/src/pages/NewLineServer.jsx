@@ -1,5 +1,4 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 
 import Servers from "../components/Dashboard/Servers";

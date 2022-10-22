@@ -69,11 +69,6 @@ function App() {
                   element={<AddFriend />}
                 />
               </Route>
-              {/* <Route
-                path="/dashboard/stageDiscovery"
-                element={<StageDiscovery />}
-              />
-              <Route path="/dashboard/nitro" element={<Nitro />} /> */}
             </Route>
             <Route
               path="/dashboard/newLineServer"
