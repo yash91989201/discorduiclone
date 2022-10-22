@@ -3,8 +3,6 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-import Button from "@mui/material/Button";
-
 import { ReactComponent as NoFriendOnline } from "../../assets/images/no_friend_online.svg";
 
 const Online = () => {

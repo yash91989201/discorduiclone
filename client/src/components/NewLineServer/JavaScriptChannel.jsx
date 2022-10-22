@@ -10,7 +10,6 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import PushPinIcon from "@mui/icons-material/PushPin";
 
 import { ReactComponent as GiftIcon } from "../../assets/icons/gift_icon.svg";
-import { ReactComponent as PlusIcon } from "../../assets/icons/plus_icon.svg";
 import GifBoxIcon from "@mui/icons-material/GifBox";
 import { ReactComponent as SmileyIcon } from "../../assets/icons/smiling_emoji.svg";
 import DiscordWumpusGif from "../../assets/icons/discord-wumpus.gif";

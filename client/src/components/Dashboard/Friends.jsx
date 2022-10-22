@@ -1,10 +1,9 @@
 import React from "react";
-import { Routes, Route, Outlet } from "react-router-dom";
-import { Box, Container } from "@mui/material";
+import { Outlet } from "react-router-dom";
+import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 
 // import custom icon
-import AddFriend from "./AddFriend";
 import ActiveUsers from "./ActiveUsers";
 
 // import icons

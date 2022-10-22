@@ -1,17 +1,11 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 
 // import AddIcon from "@mui/icons-material/Add";
 import TagIcon from "@mui/icons-material/Tag";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { ReactComponent as FriendsIcon } from "../../assets/icons/friends_icon.svg";
-import { ReactComponent as StageDiscovery } from "../../assets/icons/stage_discovery.svg";
-import { ReactComponent as NitroIcon } from "../../assets/icons/nitro_icon.svg";
-import { ReactComponent as EmptyDmList } from "../../assets/images/empty_dm_list.svg";
 import Typography from "@mui/material/Typography";
 
 const Channels = () => {
